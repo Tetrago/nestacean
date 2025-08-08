@@ -1,0 +1,19 @@
+[package]
+name = "nestacean"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+nestacean_macros = { path = "nestacean_macros" }
+serde = { version = "1.0", features = ["derive"], optional = true }
+serde_json = { version = "1.0", optional = true }
+tabled = { version = "0.20.0", optional = true }
+
+[build-dependencies]
+walkdir = { version = "2.5", optional = true }
+
+[features]
+cputest = ["serde", "serde_json", "tabled", "walkdir"]
+
+[workspace]
+members = [".", "nestacean_macros"]
