@@ -44,7 +44,7 @@ pub fn instruction_executor(_attr: TokenStream, item: TokenStream) -> TokenStrea
                 let stmts = std::mem::take(&mut func.block.stmts);
 
                 func.block.stmts = parse_quote! {
-                    let #pat = #pat.expect(concat!("Invalid argument for ", #name));
+                    let #pat = #pat.expect(concat!("invalid argument for ", #name));
                     #(#stmts)*
                 }
             }

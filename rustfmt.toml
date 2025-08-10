@@ -1,0 +1,21 @@
+unstable_features = true
+style_edition = "2018"
+
+# Style
+use_field_init_shorthand = true
+use_try_shorthand = true
+format_strings = true
+
+# Imports
+group_imports = "StdExternalCrate"
+imports_granularity = "Item"
+
+# Ordering
+reorder_impl_items = true
+
+# Comments
+wrap_comments = true
+normalize_comments = true
+
+# Indentation
+hard_tabs = true

@@ -13,8 +13,8 @@ impl fmt::Display for Error {
         use Error::*;
 
         match self {
-            InvalidOpcode(opcode) => write!(f, "Invalid opcode: 0x{opcode:02X}"),
-            UnresolvedAddress(addr) => write!(f, "Unresolved memory address: 0x{addr:04X}"),
+            InvalidOpcode(opcode) => write!(f, "invalid opcode: 0x{opcode:02X}"),
+            UnresolvedAddress(addr) => write!(f, "unresolved memory address: 0x{addr:04X}"),
         }
     }
 }

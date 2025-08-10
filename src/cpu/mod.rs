@@ -233,6 +233,7 @@ impl<'a> Cpu<'a> {
         })
     }
 
+    /// Completes the next instruction or finishes the currently executing one.
     pub fn step(&mut self) -> Result<u8> {
         if self.cycles == 0 {
             self.cycle()?;
@@ -247,6 +248,7 @@ impl<'a> Cpu<'a> {
         Ok(cycles)
     }
 
+    /// Performs one clock cycle, fetching a new instruction as needed.
     pub fn cycle(&mut self) -> Result<()> {
         if let Some(value) = self.cycles.checked_sub(1) {
             self.cycles = value;
